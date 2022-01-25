@@ -49,38 +49,43 @@ All the above scenarios demonstrate a [Page Object Model](https://www.browsersta
 This repository allows you to to use configuration files similar to the following to run your Appium tests on various platforms including on-premise devices, devices running on an on-prem grid or remote Selenium/Appium grid.
 
 ```yml
-driverType: cloudDriver
-mobileAppTesting: true
-      
-cloudDriver:
-  hubUrl: https://hub-cloud.browserstack.com/wd/hub
-  app:
-    android_custom_id: <android_custom_id>
-    android_hash_id: <android_hash_id>
-    ios_hash_id: <ios_hash_id>
-    ios_custom_id: <ios_custom_id>
-  localTunnel:
-    enabled: false
-  common_capabilities:
-    project: BrowserStack Demo Repository
-    buildPrefix: browserstack-examples-aa-cucumber-testng
-    capabilities:
-      browserstack.debug: true
-      browserstack.networkLogs: true
-      browserstack.console: debug
-  platforms:
-    - name: IOS - iPhone 12
-      os: iOS
-      os_version: '14'
-      device: "iPhone 12"
-      capabilities:
-        browserstack.appium_version: 1.21.0
-    - name: Android  - Pixel 4
-      os: Android
-      os_version: '11'
-      device: "Google Pixel 4"
-      capabilities:
-        browserstack.appium_version: 1.21.0
+{
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+  "app.android": "bs://70fe59dbec1c8e49cb21d201fae3b81e82d21570",
+  "app.ios": "bs://468f88f2107a3d846cca71d4dbb4fdfc763da3f6",
+  "app.local": "bs://468f88f2107a3d846cca71d4dbb4fdfc763da3f6",
+  "platformName": "iOS",
+  "deviceName": "iPhone 13",
+  "platformVersion": "15.2",
+  "automationName": "SampleTest",
+  "tests": {
+    "parallel": {
+      "common_caps": {
+        "project": "browserstack-examples",
+        "build": "browserstack-examples-testNG",
+        "name": "Parallel Test",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true",
+        "browserstack.console": "verbose"
+      },
+      "env_caps": [
+        {
+          "device": "Samsung Galaxy S21",
+          "platformName": "Android",
+          "os_version": "11.0",
+          "autoGrantPermissions": "true",
+          "gpsEnabled": "true"
+        },
+        {
+          "device": "iPhone 12 Pro",
+          "platformName": "iOS",
+          "os_version": "14",
+          "gpsEnabled": "true"
+        }
+      ]
+    }
+    
 
 ```
 
@@ -88,21 +93,16 @@ cloudDriver:
 
 ### Run a tests on BrowserStack
 
-Please make sure that the following keys are set in the ```capabilities.yml``` config file. 
-```yml
-driverType: cloudDriver
-mobileAppTesting: true
-cloudDriver:
-  app:
-    android_custom_id: <your_android_custom_id>
-```
+Please make sure that the following keys are set in the ```test_caps.json``` config file. 
+
 The above is just an example. You can use any of hash ID or custom ID or shareable ID for your Android/iOS app. If you were to use all three (for the same app), then hash ID will be given precedence. 
 
 
 Maven:
   ```sh
-  mvn test
+  mvn clean test -P bstack-parallel
   ```
+  
 - Output
 
   This executes all the scenarios in parallel on both Android and iOS devices on BrowserStack. Please refer to your [BrowserStack dashboard](https://app-automate.browserstack.com/) for test results.
