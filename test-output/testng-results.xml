@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parallel" duration-ms="62120" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:14:09 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="feature" class="com.browserstack.examples.tests.RunAppiumCucumberTests"/>
+        <method signature="RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="feature" class="com.browserstack.examples.tests.RunAppiumCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="iPhone 12 Pro" duration-ms="36429" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:43 IST">
+      <class name="com.browserstack.examples.tests.RunAppiumCucumberTests">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="setUpClass" is-config="true" duration-ms="234" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="setUp" is-config="true" duration-ms="10982" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="setUp" is-config="true" duration-ms="12842" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="feature" duration-ms="5058" started-at="2022-01-26T03:13:18 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:13:23 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter text to be displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[BrowserStack Echo Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="feature" duration-ms="5226" started-at="2022-01-26T03:13:20 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:13:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter text to be displayed on screen and fail scenario"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[BrowserStack Echo Fail Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [This is not a BrowserStack Echo] but found [This is BrowserStack Echo]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [This is not a BrowserStack Echo] but found [This is BrowserStack Echo]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.browserstack.examples.stepdefs.EchoPageSteps.echoShouldSucceed(EchoPageSteps.java:28)
+at ✽.it should pass and show message as "This is not a BrowserStack Echo"(classpath:features/echoFail.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="tearDown" is-config="true" duration-ms="1315" started-at="2022-01-26T03:13:24 IST" finished-at="2022-01-26T03:13:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="setUp" is-config="true" duration-ms="10168" started-at="2022-01-26T03:13:25 IST" finished-at="2022-01-26T03:13:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="tearDown" is-config="true" duration-ms="1685" started-at="2022-01-26T03:13:26 IST" finished-at="2022-01-26T03:13:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="feature" duration-ms="5516" started-at="2022-01-26T03:13:36 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:13:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="tearDown" is-config="true" duration-ms="1248" started-at="2022-01-26T03:13:42 IST" finished-at="2022-01-26T03:13:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@7a419da4]" name="tearDownClass" is-config="true" duration-ms="8" started-at="2022-01-26T03:13:43 IST" finished-at="2022-01-26T03:13:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.browserstack.examples.tests.RunAppiumCucumberTests -->
+    </test> <!-- iPhone 12 Pro -->
+    <test name="Samsung Galaxy S21" duration-ms="62120" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:14:09 IST">
+      <class name="com.browserstack.examples.tests.RunAppiumCucumberTests">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="setUpClass" is-config="true" duration-ms="234" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="setUp" is-config="true" duration-ms="26468" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="setUp" is-config="true" duration-ms="26346" started-at="2022-01-26T03:13:07 IST" finished-at="2022-01-26T03:13:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="feature" duration-ms="3495" started-at="2022-01-26T03:13:33 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:13:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter text to be displayed on screen and fail scenario"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[BrowserStack Echo Fail Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [This is not a BrowserStack Echo] but found [This is BrowserStack Echo]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [This is not a BrowserStack Echo] but found [This is BrowserStack Echo]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.browserstack.examples.stepdefs.EchoPageSteps.echoShouldSucceed(EchoPageSteps.java:28)
+at ✽.it should pass and show message as "This is not a BrowserStack Echo"(classpath:features/echoFail.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="feature" duration-ms="3151" started-at="2022-01-26T03:13:34 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:13:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter text to be displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[BrowserStack Echo Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="tearDown" is-config="true" duration-ms="1398" started-at="2022-01-26T03:13:38 IST" finished-at="2022-01-26T03:13:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="tearDown" is-config="true" duration-ms="1232" started-at="2022-01-26T03:13:38 IST" finished-at="2022-01-26T03:13:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String,java.lang.String,int,java.lang.reflect.Method)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="setUp" is-config="true" duration-ms="23945" started-at="2022-01-26T03:13:39 IST" finished-at="2022-01-26T03:14:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[parallel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.browserstack.examples.tests.RunAppiumCucumberTests.feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="feature" duration-ms="3865" started-at="2022-01-26T03:14:03 IST" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-01-26T03:14:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="tearDown" is-config="true" duration-ms="1365" started-at="2022-01-26T03:14:08 IST" finished-at="2022-01-26T03:14:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.browserstack.examples.tests.RunAppiumCucumberTests@1ba9117e]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2022-01-26T03:14:09 IST" finished-at="2022-01-26T03:14:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.browserstack.examples.tests.RunAppiumCucumberTests -->
+    </test> <!-- Samsung Galaxy S21 -->
+  </suite> <!-- Parallel -->
+</testng-results>
