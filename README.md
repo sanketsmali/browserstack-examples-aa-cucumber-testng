@@ -52,9 +52,8 @@ This repository allows you to to use configuration files similar to the followin
 {
   "user": "BROWSERSTACK_USERNAME",
   "key": "BROWSERSTACK_ACCESS_KEY",
-  "app.android": "bs://70fe59dbec1c8e49cb21d201fae3b81e82d21570",
-  "app.ios": "bs://468f88f2107a3d846cca71d4dbb4fdfc763da3f6",
-  "app.local": "bs://468f88f2107a3d846cca71d4dbb4fdfc763da3f6",
+  "app.android": "<app-id>",
+  "app.ios": "<app-id>",
   "platformName": "iOS",
   "deviceName": "iPhone 13",
   "platformVersion": "15.2",
